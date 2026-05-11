@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usama Maqsood — CV</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #f5f5f5;
+    }
+
+    .page-wrapper {
+      max-width: 850px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 48px 52px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Print Button */
+    .print-bar {
+      text-align: right;
+      margin-bottom: 24px;
+    }
+    .print-btn {
+      background: #0052CC;
+      color: #fff;
+      border: none;
+      padding: 9px 22px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+    .print-btn:hover { background: #0040a0; }
+
+    /* Header */
+    .cv-header { margin-bottom: 20px; border-bottom: 2px solid #1a1a1a; padding-bottom: 14px; }
+    .cv-name { font-size: 26pt; font-weight: 700; color: #0a0a0a; letter-spacing: -0.5px; }
+    .cv-title { font-size: 13pt; color: #444; margin-top: 3px; font-weight: 400; }
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin-top: 10px;
+      font-size: 10pt;
+      color: #333;
+    }
+    .cv-contact a { color: #0052CC; text-decoration: none; }
+
+    /* Sections */
+    .section { margin-top: 22px; }
+    .section-title {
+      font-size: 12pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0a0a0a;
+      border-bottom: 1px solid #bbb;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary-text { font-size: 10.5pt; color: #333; line-height: 1.6; }
+
+    /* Skills */
+    .skills-grid { display: flex; flex-direction: column; gap: 5px; }
+    .skill-row { display: flex; gap: 6px; font-size: 10pt; }
+    .skill-label { font-weight: 700; color: #1a1a1a; min-width: 190px; }
+    .skill-value { color: #444; }
+
+    /* Experience */
+    .exp-item { margin-bottom: 18px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; }
+    .exp-role { font-size: 11pt; font-weight: 700; color: #0a0a0a; }
+    .exp-period { font-size: 10pt; color: #555; white-space: nowrap; font-weight: 600; }
+    .exp-company { font-size: 10.5pt; color: #0052CC; font-weight: 600; margin-top: 1px; }
+    .exp-location { font-size: 9.5pt; color: #777; margin-top: 1px; }
+    .exp-bullets { margin-top: 6px; padding-left: 18px; }
+    .exp-bullets li { font-size: 10pt; color: #333; margin-bottom: 3px; line-height: 1.5; }
+
+    /* Education */
+    .edu-item { margin-bottom: 14px; }
+    .edu-degree { font-size: 11pt; font-weight: 700; color: #0a0a0a; }
+    .edu-school { font-size: 10.5pt; color: #0052CC; font-weight: 600; }
+    .edu-period { font-size: 10pt; color: #555; }
+    .edu-detail { font-size: 10pt; color: #444; margin-top: 2px; }
+
+    /* Projects */
+    .project-item { margin-bottom: 12px; }
+    .project-name { font-size: 10.5pt; font-weight: 700; color: #0a0a0a; }
+    .project-meta { font-size: 9.5pt; color: #555; font-weight: 600; }
+    .project-desc { font-size: 10pt; color: #444; margin-top: 2px; line-height: 1.5; }
+    .project-link a { font-size: 9.5pt; color: #0052CC; }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .page-wrapper { margin: 0; padding: 32px 40px; box-shadow: none; max-width: 100%; }
+      .print-bar { display: none; }
+      .section { page-break-inside: avoid; }
+      .exp-item { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Print Button -->
+    <div class="print-bar">
+      <button class="print-btn" onclick="window.print()">Save as PDF</button>
+    </div>
+
+    <!-- Header -->
+    <div class="cv-header">
+      <div class="cv-name">Usama Maqsood</div>
+      <div class="cv-title">Lead Full Stack Mobile & AI Developer</div>
+      <div class="cv-contact">
+        <span>Islamabad, Pakistan</span>
+        <span>|</span>
+        <span>+92 301 103 1213</span>
+        <span>|</span>
+        <a href="mailto:usamamaqsood416@gmail.com">usamamaqsood416@gmail.com</a>
+        <span>|</span>
+        <a href="https://www.linkedin.com/in/usamamaqsoodai" target="_blank">linkedin.com/in/usamamaqsoodai</a>
+        <span>|</span>
+        <a href="https://github.com/usamamaqsood690" target="_blank">github.com/usamamaqsood690</a>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Professional Summary</div>
+      <p class="summary-text">
+        Lead Full Stack Mobile &amp; AI Developer with 8+ years of experience building scalable fintech, AI-driven, and cross-platform applications using Flutter, Dart, Swift, Java, and Python. Specialized in high-performance cross-platform products with real-time sockets, secure payment integrations, AI chatbot workflows, and cloud automation. Experienced in leading cross-functional engineering teams of 15–20, managing full app lifecycle from development to Play Store and App Store deployment, and integrating analytics stacks (Meta Events, Adjust SDK, Firebase Analytics, Microsoft Clarity). Founder of Stack Stars IT Center with a 100% on-time delivery record for international clients.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="skill-label">Mobile Development:</span>
+          <span class="skill-value">Flutter, Dart, Swift, Java, Kotlin, Android SDK, iOS SDK, React Native</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">AI & Machine Learning:</span>
+          <span class="skill-value">GPT, Gemini, LLM Integration, PyBot, Tiny Object Detection, Spiking Neural Networks (SNNs), Python</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Backend & Cloud:</span>
+          <span class="skill-value">Firebase, REST APIs, Node.js, Google Cloud Platform, Cloud Functions</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Fintech & Payments:</span>
+          <span class="skill-value">JazzCash, HBL Payment Gateway, Stripe, Real-time trading, Financial compliance</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Analytics & Attribution:</span>
+          <span class="skill-value">Meta Events (Facebook SDK), Adjust SDK, Firebase Analytics, Microsoft Clarity</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">App Store Management (ASO):</span>
+          <span class="skill-value">Google Play Store, Apple App Store, App signing, Release tracks, Store optimisation</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">DevOps & Tools:</span>
+          <span class="skill-value">GitHub, Bitbucket, Git, Jira, CI/CD, Agile/Scrum, Sprint planning</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">Architecture & Patterns:</span>
+          <span class="skill-value">MVVM, BLoC, Clean Architecture, Microservices, Native Flutter Plugins</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-label">UI/UX & Design:</span>
+          <span class="skill-value">Material Design, Cupertino, Figma, Wireframing, Prototyping</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Lead Full Stack Mobile &amp; AI Developer</div>
+            <div class="exp-company">Inexor Inc</div>
+            <div class="exp-location">Islamabad, Pakistan (Hybrid)</div>
+          </div>
+          <div class="exp-period">Mar 2025 – May 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Lead developer on <strong>Wealth NX AI</strong> — an AI-powered fintech application for the US market, shipped on both iOS and Android, featuring AI-driven financial insights, real-time analytics, and secure payment flows.</li>
+          <li>Led fintech mobile app development with real-time sockets, AI chatbot, and financial transaction modules.</li>
+          <li>Managed Google Play Store and Apple App Store accounts — building, signing, and uploading production releases on both platforms.</li>
+          <li>Integrated Meta Events (Facebook SDK), Adjust attribution, Firebase Analytics, and Microsoft Clarity for full-stack in-app analytics and user behaviour tracking.</li>
+          <li>Managed sprint planning, backlog grooming, and release cycles in Jira; maintained codebase via GitHub and Bitbucket with branch strategies and PR reviews.</li>
+          <li>Led cross-functional teams, enforced code standards, drove CI/CD pipelines and unit/widget/integration test coverage.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Technical Lead AI &amp; Mobile App Developer</div>
+            <div class="exp-company">Mediatiz Foundation</div>
+            <div class="exp-location">Islamabad, Pakistan (Hybrid)</div>
+          </div>
+          <div class="exp-period">Jul 2024 – Apr 2025</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built <strong>PyBot</strong> — an AI chatbot using GPT and Gemini LLM technologies integrated into the Khudi LMS platform.</li>
+          <li>Developed Khudi LMS mobile app with JazzCash and HBL payment gateway integrations and real-time progress tracking.</li>
+          <li>Integrated Firebase Analytics events and Meta Events for campaign attribution and user funnel analysis.</li>
+          <li>Managed Play Store and App Store submissions, release tracks, and store listing optimisation.</li>
+          <li>Optimised mobile performance by 40%, improving user retention by 25%.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Senior Mobile App Developer</div>
+            <div class="exp-company">GFM | Mubasher</div>
+            <div class="exp-location">Islamabad, Pakistan (Remote)</div>
+          </div>
+          <div class="exp-period">Jan 2024 – Sep 2024</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Developed Flutter applications for Android and iOS serving <strong>100K+ active users</strong> across the MENA region.</li>
+          <li>Built <strong>Mubasher Info</strong> and <strong>Beltone IR</strong> — trading and financial apps with secure authentication and real-time price tracking.</li>
+          <li>Managed Play Store and App Store deployments — version management, release notes, and compliance reviews.</li>
+          <li>Integrated Adjust SDK for mobile attribution and Firebase Analytics for event tracking and funnel reporting.</li>
+          <li>Built custom Flutter + Native plugins for performance-critical modules, improving app speed by 40%.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Team Lead Flutter Developer</div>
+            <div class="exp-company">Claystone Tech</div>
+            <div class="exp-location">Islamabad, Pakistan (Onsite)</div>
+          </div>
+          <div class="exp-period">Jun 2023 – Feb 2024</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led enterprise-level real estate mobile app development with geolocation services and secure authentication.</li>
+          <li>Architected <strong>DHA Resident</strong>, DHA CTT, and Askari QA apps for government and real estate systems.</li>
+          <li>Managed end-to-end Play Store and App Store publishing including internal testing tracks and staged rollouts.</li>
+          <li>Integrated Microsoft Clarity for session recording and heatmap analysis on key user flows.</li>
+          <li>Collaborated with cross-functional teams delivering high-performance, API-integrated solutions at scale.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Flutter Developer</div>
+            <div class="exp-company">ISYSTECH IT Solutions Pvt. Ltd.</div>
+            <div class="exp-location">Islamabad, Pakistan (Onsite)</div>
+          </div>
+          <div class="exp-period">Dec 2022 – May 2023</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Developed <strong>Speedy Wi-Fi Hotspot</strong> — a secure, location-based connectivity solution for public and commercial users.</li>
+          <li>Engineered ad monetisation modules (AdMob) with advanced targeting, video ads, and native advertising formats.</li>
+          <li>Integrated Meta Events to track install attribution and in-app engagement for ad campaigns.</li>
+          <li>Designed and launched Wallpapers &amp; Frames apps with high-performance image rendering and user personalisation.</li>
+          <li>Managed Play Store listings, store screenshots, and keyword optimisation for multiple published apps.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Android Developer</div>
+            <div class="exp-company">Regal Systems</div>
+            <div class="exp-location">Sahiwal, Pakistan (Onsite)</div>
+          </div>
+          <div class="exp-period">Mar 2020 – Dec 2021</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Developed and deployed high-performance Android and Flutter applications for Android and iOS platforms.</li>
+          <li>Integrated REST APIs and third-party libraries to enhance app functionality and performance.</li>
+          <li>Handled Play Store account management, app signing, and production releases.</li>
+          <li>Built high-volume, low-latency systems for mission-critical operations with strong uptime requirements.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Founder &amp; CEO</div>
+            <div class="exp-company">Stack Stars IT Center</div>
+            <div class="exp-location">Islamabad, Pakistan</div>
+          </div>
+          <div class="exp-period">2018 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Founded and scaled a technology company specialising in AI and cross-platform mobile app development.</li>
+          <li>Managed Google Play Store and Apple App Store developer accounts across multiple client products.</li>
+          <li>Delivered full analytics stacks (Meta Events, Adjust, Firebase Analytics, Microsoft Clarity) as part of client service.</li>
+          <li>Led teams of developers, designers, and engineers delivering enterprise-grade mobile solutions for international clients.</li>
+          <li>Maintained a <strong>100% on-time delivery record</strong> with strong client satisfaction through strategic planning and QA.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education</div>
+
+      <div class="edu-item">
+        <div class="exp-header">
+          <div>
+            <div class="edu-degree">MS Artificial Intelligence</div>
+            <div class="edu-school">FAST-NU (National University of Computer and Emerging Sciences), Islamabad</div>
+          </div>
+          <div class="exp-period">2022 – 2024</div>
+        </div>
+        <div class="edu-detail">Research: Tiny Object Detection through Satellite Images &amp; Spiking Neural Networks (SNNs)</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="exp-header">
+          <div>
+            <div class="edu-degree">BS Computer Science</div>
+            <div class="edu-school">University of Sahiwal, Pakistan</div>
+          </div>
+          <div class="exp-period">2017 – 2021</div>
+        </div>
+        <div class="edu-detail">Core: Algorithms, Data Structures, Software Engineering, Database Systems, Object-Oriented Programming</div>
+      </div>
+    </div>
+
+    <!-- Key Projects -->
+    <div class="section">
+      <div class="section-title">Key Projects (Live on App Stores)</div>
+
+      <div class="project-item">
+        <div class="project-name">Wealth NX AI — AI Fintech App (USA)</div>
+        <div class="project-meta">Flutter · iOS &amp; Android · AI · Fintech</div>
+        <div class="project-desc">AI-powered financial insights, real-time analytics, and secure payment flows for the US market.</div>
+        <div class="project-link"><a href="https://play.google.com/store/apps/details?id=com.inexor.wealthnx.ai">play.google.com/store/apps/details?id=com.inexor.wealthnx.ai</a></div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Mubasher Info — MENA Trading App (100K+ Users)</div>
+        <div class="project-meta">Flutter · iOS &amp; Android · Fintech · MENA Region</div>
+        <div class="project-desc">Real-time trading and financial data platform for the MENA region with 100K+ active users.</div>
+        <div class="project-link"><a href="https://play.google.com/store/apps/details?id=com.gfm.tadawuly">play.google.com/store/apps/details?id=com.gfm.tadawuly</a></div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Beltone IR — Financial Investor Relations App</div>
+        <div class="project-meta">Flutter · iOS &amp; Android · Fintech</div>
+        <div class="project-link"><a href="https://play.google.com/store/apps/details?id=com.beltonefinancial.beltone">play.google.com/store/apps/details?id=com.beltonefinancial.beltone</a></div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Khudi LMS — Learning Management System with AI Chatbot</div>
+        <div class="project-meta">Flutter · iOS &amp; Android · AI · EdTech</div>
+        <div class="project-link"><a href="https://play.google.com/store/apps/details?id=com.mediatiz.khudi">play.google.com/store/apps/details?id=com.mediatiz.khudi</a></div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">DHA Resident App — Enterprise Real Estate Platform</div>
+        <div class="project-meta">Flutter · iOS &amp; Android · Government/Real Estate</div>
+        <div class="project-link"><a href="https://play.google.com/store/apps/details?id=com.claystonetech.dhair.resident">play.google.com/store/apps/details?id=com.claystonetech.dhair.resident</a></div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">Speedy Wi-Fi Hotspot · Khudi Chat · Food Recipes · PTS Jobs · Islamic Gift</div>
+        <div class="project-meta">Flutter &amp; Android · Multiple published apps on Google Play Store</div>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section">
+      <div class="section-title">Key Achievements</div>
+      <ul class="exp-bullets" style="padding-left: 18px;">
+        <li>Shipped apps serving <strong>100K+ active users</strong> on both iOS and Android across MENA and USA markets.</li>
+        <li>Led engineering teams of <strong>15–20 developers</strong>, delivering products on time and at scale.</li>
+        <li>Reduced mobile app load time and memory usage by <strong>40%</strong> through advanced profiling and optimization.</li>
+        <li>Improved user retention by <strong>25%</strong> at Mediatiz Foundation through performance and UX improvements.</li>
+        <li>Maintained <strong>100% on-time delivery record</strong> across all freelance and company projects since 2018.</li>
+        <li>Published <strong>10+ live applications</strong> across Google Play Store and Apple App Store.</li>
+        <li>MS AI research in <strong>Tiny Object Detection through Satellite Images</strong> using Spiking Neural Networks.</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
